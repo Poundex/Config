@@ -1,7 +1,7 @@
 
 ## GVM
 
-for l in ~/.gvm/* 
+for l in ~/.sdkman/* 
     for t in $l/*
         if echo $t | grep -q /current
             set PATH $PATH (realpath -s $t)/bin
@@ -9,8 +9,8 @@ for l in ~/.gvm/*
     end
 end
 
-function gvm
-    bash -l -c "gvm $argv"
+function sdk
+    bash -l -c "sdk $argv"
 end
 
 
