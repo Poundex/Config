@@ -1,13 +1,18 @@
 " BEGIN Basic options
 set nocompatible
 set incsearch
+set hlsearch
 set showcmd
 set ai
 set nu
 set relativenumber
 set wildmenu
+set backspace=indent,eol,start
+set ruler
+set scrolloff=1
+set smarttab
 filetype plugin on
-syntax on    
+syntax enable
 set path+=,**
 """ END Basic options
 
@@ -50,6 +55,5 @@ let g:netrw_altv=1          " open splits to the right
 let g:netrw_liststyle=3     " tree view
 let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
-
 
 command! MakeTags !ctags -R .
