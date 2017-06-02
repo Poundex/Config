@@ -11,6 +11,10 @@ set backspace=indent,eol,start
 set ruler
 set scrolloff=1
 set smarttab
+set ignorecase
+set infercase
+set splitright
+set spelllang=en_gb
 filetype plugin on
 syntax enable
 set path+=,**
