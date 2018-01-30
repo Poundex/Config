@@ -44,7 +44,7 @@ set shell=/bin/bash
 
 """ BEGIN Themes & Colours
 set background=dark
-colorscheme solarized
+  " colorscheme solarized
 let g:airline_theme='solarized'
 let g:airline_solarized_bg='dark'
 """ END Themes & Colours
