@@ -61,4 +61,11 @@ let g:netrw_liststyle=3     " tree view
 let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
+"augroup vimwiki
+au BufWritePost ~/vimwiki/* !git -C /home/poundex/vimwiki/ add "%";git -C /home/poundex/vimwiki/ commit -m "Auto commit of %:t." "%"
+"au! BufRead /home/poundex/vimwiki/index.wiki !git pull
+"au! BufWritePost /home/poundex/vimwiki/* !git add ;git commit -m "Auto commit + push.";git push
+"augroup END
+
 command! MakeTags !ctags -R .
+

@@ -19,7 +19,9 @@ function jupiter; ssh -C -X 192.168.0.50; end
 function updo; sudo pacman -Syyu; end
 function add; sudo pacman -Sy $argv; end
 function mkdir; command mkdir -p $argv; cd $argv; end
+function mkdir!; command mkdir $argv; end
 alias gsb='git status -sb' 
+alias sz="sensors"
 
 ## THEME OPTIONS
 set -g theme_color_scheme base16
@@ -35,3 +37,6 @@ if status is-interactive
 	fish_hybrid_key_bindings 
 end
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/poundex/Downloads/google-cloud-sdk/path.fish.inc' ]; if type source > /dev/null; source '/home/poundex/Downloads/google-cloud-sdk/path.fish.inc'; else; . '/home/poundex/Downloads/google-cloud-sdk/path.fish.inc'; end; end
